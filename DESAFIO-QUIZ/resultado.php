@@ -12,6 +12,8 @@
         $resposta1 = strtolower($_POST['resposta1']);
         $resposta2 = strtolower($_POST['resposta2']);
         $resposta3 = strtolower($_POST['resposta3']);
+        $resposta4 = strtolower($_POST['resposta4']);
+        $resposta5 = strtolower($_POST['resposta5']);
 
         // Verifica as respostas
         $acertos = 0;
@@ -22,6 +24,12 @@
             $acertos++;
         }
         if($resposta3 == "oito") {
+            $acertos++;
+        }
+        if($resposta4 == "$php") {
+            $acertos++;
+        }
+        if($resposta5 == "php") {
             $acertos++;
         }
 

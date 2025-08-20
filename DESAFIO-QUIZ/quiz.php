@@ -29,6 +29,12 @@
 
         <p>Pergunta 3: Quantos planetas existem no sistema solar?</p>
         <input type="text" name="resposta3" required><br>
+        
+        <p>Pergunta 4: criar uma variavel em php?</p>
+        <input type="text" name="resposta4" required><br>
+
+        <p>Pergunta 5: Qual é a extenção de um arquivo php?</p>
+        <input type="text" name="resposta5" required><br>
 
         <button type="submit">Verificar Respostas</button>
     </form>
