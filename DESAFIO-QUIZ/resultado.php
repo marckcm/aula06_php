@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Resultado do Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <?php
     // Verifica se o nome e as respostas foram enviadas via formulário
-    if(isset($_POST['nome']) && isset($_POST['resposta1']) && isset($_POST['resposta2']) && isset($_POST['resposta3'])) {
+    if (isset($_POST['nome']) && isset($_POST['resposta1']) && isset($_POST['resposta2']) && isset($_POST['resposta3']) && isset($_POST['resposta4']) && isset($_POST['resposta5'])) {
         $nome = $_POST['nome'];
         $resposta1 = strtolower($_POST['resposta1']);
         $resposta2 = strtolower($_POST['resposta2']);
@@ -17,26 +20,26 @@
 
         // Verifica as respostas
         $acertos = 0;
-        if($resposta1 == "brasília") {
+        if ($resposta1 == "brasília" || $resposta1 == "brasilia") {
             $acertos++;
         }
-        if($resposta2 == "cervantes") {
+        if ($resposta2 == "cervantes") {
             $acertos++;
         }
-        if($resposta3 == "oito") {
+        if ($resposta3 == "oito") {
             $acertos++;
         }
-        if($resposta4 == "$php") {
+        if ($resposta4 == "$") {
             $acertos++;
         }
-        if($resposta5 == "php") {
+        if ($resposta5 == "php") {
             $acertos++;
         }
 
         // Exibe o resultado
         echo "<h2>Resultado do Quiz</h2>";
         echo "<p>Olá, $nome!</p>";
-        echo "<p>Você acertou $acertos de 3 perguntas.</p>";
+        echo "<p>Você acertou $acertos de 5 perguntas.</p>";
 
         // Botão para resetar
         echo '<form action="index.php" method="post">';
@@ -49,4 +52,5 @@
     }
     ?>
 </body>
+
 </html>

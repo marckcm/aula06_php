@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Quiz - Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h2>Bem-vindo ao Quiz!</h2>
     <form action="quiz.php" method="post">
@@ -12,4 +15,5 @@
         <button type="submit">Iniciar Quiz</button>
     </form>
 </body>
+
 </html>

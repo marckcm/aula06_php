@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <?php
     // Verifica se o nome foi enviado via formulário
-    if(isset($_POST['nome'])) {
+    if (isset($_POST['nome'])) {
         $nome = $_POST['nome'];
     } else {
         // Se o nome não foi enviado, redireciona de volta para a página inicial
@@ -20,7 +23,7 @@
 
     <form action="resultado.php" method="post">
         <input type="hidden" name="nome" value="<?php echo $nome; ?>">
-        
+
         <p>Pergunta 1: Qual é a capital do Brasil?</p>
         <input type="text" name="resposta1" required><br>
 
@@ -29,14 +32,15 @@
 
         <p>Pergunta 3: Quantos planetas existem no sistema solar?</p>
         <input type="text" name="resposta3" required><br>
-        
-        <p>Pergunta 4: criar uma variavel em php?</p>
+
+        <p>Pergunta 4: criar uma variavel em php como iniciar?</p>
         <input type="text" name="resposta4" required><br>
 
-        <p>Pergunta 5: Qual é a extenção de um arquivo php?</p>
+        <p>Pergunta 5: Qual é a extenção de uma página em php?</p>
         <input type="text" name="resposta5" required><br>
 
         <button type="submit">Verificar Respostas</button>
     </form>
 </body>
+
 </html>
